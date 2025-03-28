@@ -1,51 +1,31 @@
-# Code Climate golangci Engine
+# Try Qlty today, the newest edition of Code Climate Quality.
+#### This repository is deprecated and archived.
 
-`codeclimate-golangci` is a Code Climate engine that executes [`golangci-lint`](https://github.com/golangci/golangci-lint) and reports findings to Code Climate.
+This is a repository for a Code Climate Quality plugin which is packaged as a Docker image.
 
-### Installation & Usage
+Code Climate Quality is being replaced with the new [Qlty](qlty.sh) code quality platform. Qlty uses a new plugin system which does not require packaging plugins as Docker images.
 
-1. If you haven't already, [install the Code Climate CLI](https://github.com/codeclimate/codeclimate).
-2. Run `codeclimate engines:enable golangci`. This command both installs the engine and enables it in your `.codeclimate.yml` file.
-3. Configure `golangci-lint` through its [configuration file](https://golangci-lint.run/usage/configuration/).
-3. You're ready to analyze! Browse into your project's folder and run `codeclimate analyze`.
+As a result, this repository is no longer maintained and has been archived.
 
-### Configuration
+## Advantages of Qlty plugins
+The new Qlty plugins system provides key advantages over the older, Docker-based plugin system:
 
-You can enable the engine using your `.codeclimate.yml`:
+- Linting runs much faster without the overhead of virtualization
+- New versions of linters are available immediately without needing to wait for a re-packaged release
+- Plugins can be run with any arbitrary extensions (like extra rules and configs) without requiring pre-packaging
+- Eliminates security issues associated with exposing a Docker daemon
 
-```yaml
-engines:
-  golangci:
-    enabled: true
-```
+## Try out Qlty today free
 
-Then, configure `golangci-lint` through its [configuration file](https://golangci-lint.run/usage/configuration/).
+[Qlty CLI](https://docs.qlty.sh/cli/quickstart) is the fastest linter and auto-formatter for polyglot teams. It is completely free and available for Mac, Windows, and Linux.
 
-### Need help?
+  - Install Qlty CLI:
+`
+curl https://qlty.sh | sh # Mac or Linux
+`
+or ` <windows install line> `
 
-For help with `codeclimate-golangci`, please open an issue on this repository.
+[Qlty Cloud](https://docs.qlty.sh/cloud/quickstart) is a full code health platform for integrating code quality into development team workflows. It is free for unlimited private contributors.
+  - [Try Qlty Cloud today](https://docs.qlty.sh/cloud/quickstart)
 
-### License
-
-```
-Copyright (c) 2015 Gympass.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-```
+**Note**: For existing customers of Quality, please see our [Migration Guide](https://docs.qlty.sh/migration/guide) for more information and resources.
